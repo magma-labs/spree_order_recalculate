@@ -29,6 +29,7 @@ require 'spree/testing_support/capybara_ext'
 require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/factories'
 require 'spree/testing_support/url_helpers'
+require 'pry'
 
 # Requires factories defined in lib/spree_order_recalculate/factories.rb
 require 'spree_order_recalculate/factories'
