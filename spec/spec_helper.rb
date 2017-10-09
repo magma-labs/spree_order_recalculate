@@ -33,7 +33,6 @@ require 'spree/testing_support/preferences'
 
 require 'spree/api/testing_support/helpers'
 require 'spree/api/testing_support/setup'
-require 'pry'
 
 # Requires factories defined in lib/spree_order_recalculate/factories.rb
 require 'spree_order_recalculate/factories'
