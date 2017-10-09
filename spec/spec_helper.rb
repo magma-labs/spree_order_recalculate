@@ -38,6 +38,8 @@ require 'pry'
 # Requires factories defined in lib/spree_order_recalculate/factories.rb
 require 'spree_order_recalculate/factories'
 
+$LOAD_PATH << File.join(File.realpath(__FILE__), '..', 'lib')
+
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 
