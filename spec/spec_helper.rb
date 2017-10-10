@@ -29,9 +29,15 @@ require 'spree/testing_support/capybara_ext'
 require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/factories'
 require 'spree/testing_support/url_helpers'
+require 'spree/testing_support/preferences'
+
+require 'spree/api/testing_support/helpers'
+require 'spree/api/testing_support/setup'
 
 # Requires factories defined in lib/spree_order_recalculate/factories.rb
 require 'spree_order_recalculate/factories'
+
+$LOAD_PATH << File.join(File.realpath(__FILE__), '..', 'lib')
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
@@ -46,6 +52,12 @@ RSpec.configure do |config|
   # visit spree.admin_path
   # current_path.should eql(spree.products_path)
   config.include Spree::TestingSupport::UrlHelpers
+
+  config.include Spree::Api::TestingSupport::Helpers, type: :controller
+  config.extend  Spree::Api::TestingSupport::Setup, type: :controller
+  config.include Spree::TestingSupport::ControllerRequests, type: :controller
+  config.include Spree::TestingSupport::Preferences, type: :controller
+  config.include Devise::TestHelpers, type: :controller
 
   # == Mock Framework
   #

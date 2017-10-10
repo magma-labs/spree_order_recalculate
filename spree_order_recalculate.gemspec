@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_order_recalculate'
-  s.version     = '3.2.2'
+  s.version     = '3.3.0'
   s.summary     = 'Add gem summary here'
   s.description = 'As spree doesn\'t update line items price when products price changes, this extension do it.'
   s.required_ruby_version = '>= 2.0.0'
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 3.0.0'
+  s.add_dependency 'spree_core', '~> 3.1', '>= 3.1.1'
 
   s.add_development_dependency 'capybara', '~> 2.4'
   s.add_development_dependency 'coffee-rails'

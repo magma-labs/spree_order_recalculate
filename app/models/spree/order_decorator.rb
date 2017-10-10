@@ -13,7 +13,7 @@ module Spree
           end
         end
       end
-      update_needed ? update! : false
+      update_needed ? update_with_updater! : false
     end
   end
 end
